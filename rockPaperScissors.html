@@ -16,11 +16,9 @@
     }
 
     function singleRound(playerChoice) {
-        playerChoice.toLowerCase();
-        console.log(playerChoice);
+        playerChoice = playerChoice.toLowerCase();
         
         let computerChoice = computerPlay();
-        console.log(computerChoice);
 
         if (playerChoice == 'rock' && computerChoice == 'scissors'){
             return "You Win! Rock beats Scissors!"
@@ -45,6 +43,13 @@
         }
           else{
             return "You Lose. You have to choose rock, paper, or scissors to win."
+        }
+    }
+
+    function game() {
+        for(i = 0; i <= 5; i++) {
+            let choice = prompt('Pick rock, paper, or scissors!');
+            alert (singleRound(choice));
         }
     }
 </script>
